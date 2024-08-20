@@ -5,10 +5,16 @@ html {
 }
 
 .container {
+  resize: both;
+  overflow: auto;
+  display: grid;
   text-align: center;
   height: 100%;
+  gap: 15px;
   padding: 16px;
   box-sizing: border-box;
+  grid-template-rows: repeat(3, 1fr), repeat(1, 5fr);
+  grid-template-columns: repeat(1, 1fr) repeat(1, 3fr);
 }
 
 .container div {
@@ -21,6 +27,8 @@ html {
 }
 
 .header {
+  grid-column-start: 1;
+  grid-column-end: 6;
   background-color: #006157;
   grid-column: 1 / 3;
 }
