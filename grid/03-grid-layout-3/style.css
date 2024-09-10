@@ -36,14 +36,15 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.sidebar {
-  grid-column: 1;
-  align-items: stretch;
-  display: inline-grid;
+.sidebar {  
+  height: 100%;
+  grid-area: 2/1/4/1;
+  display: grid;
   gap: 50px;
   align-self: center;
   background-color: #C50208;
-  grid-template-rows: repeat(autofill, minmax(150px, 1fr));
+  grid-template-rows: repeat(4, 1fr);
+  
 }
 
 .sidebar .photo {
@@ -67,6 +68,7 @@
 }
 
 .nav ul li {
+  display: grid;
   font-size: 16px;
   text-transform: uppercase;
 }
